@@ -1,0 +1,57 @@
+<main id="content" role="main">
+
+  {{> common/betaBanner}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Submit Registration</h1>
+
+      {{#areErrors}}
+      <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+              Please fix the following errors
+          </h2>
+
+          <ul class="error-summary-list">
+              {{#errors}}
+              <li><a href="#{{field}}">{{description}}</a></li>
+              {{/errors}}
+          </ul>
+
+      </div>
+      {{/areErrors}}
+
+      <form action="/form" method="POST" enctype="multipart/form-data">
+          <div class="form-group {{#nameError}} form-group-error {{/nameError}}">
+              <label class="form-label-bold" for="name">Name
+                  {{#nameError}}
+                  <span class="error-message">
+                      {{nameDesc}}
+                  </span>
+                  {{/nameError}}
+              </label>
+              <input class="form-control" type="text" id="name" name="name" value="{{ data.name }}">
+
+          </div>
+
+          <div class="form-group {{#companyError}} form-group-error {{/companyError}} ">
+              <label class="form-label-bold" for="company">Company
+                  {{#companyError}}
+                  <span class="error-message">
+                      {{companyDesc}}
+                  </span>
+                  {{/companyError}}
+              </label>
+              <input class="form-control" type="text" id="company" name="company" value="{{ data.company }}">
+          </div>
+
+
+          <input class="button" type="submit" value="Submit">
+
+      </form>
+    </div>
+  </div>
+
+</main>
