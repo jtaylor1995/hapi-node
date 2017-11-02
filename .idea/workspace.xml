@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7577e0a-a521-4129-ba30-3f91de94aace" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/apple-touch-icon-152x152.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/apple-touch-icon-167x167.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/apple-touch-icon-180x180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/gov.uk_logotype_crown_invert.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/gov.uk_logotype_crown_invert_trans.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/opengraph-image.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/fonts/GDSTransportTabular-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/fonts/GDSTransportTabular-Light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/fonts/GDSTransportWebsite-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/fonts/GDSTransportWebsite.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/gov.uk_logotype_crown-1x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/gov.uk_logotype_crown.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/govuk-crest-2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/govuk-crest-ie.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/govuk-crest.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/open-government-licence.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/images/open-government-licence_2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/images/gov.uk_logotype_crown.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/javascripts/govuk-template.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/javascripts/ie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/fonts-ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/fonts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/govuk-template-ie6.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/govuk-template-ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/govuk-template-ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/govuk-template-print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public-original/stylesheets/govuk-template.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/site/site.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/default.js" afterPath="$PROJECT_DIR$/src/routes/default.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/routes/public.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+              <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -98,8 +68,8 @@
       <file leaf-file-name="default.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+            <state relative-caret-position="585">
+              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -109,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/views/form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="244">
-              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+              <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -150,6 +120,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>apply for a</find>
+      <find>site</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -210,19 +181,6 @@
               <item name="hapi-mustache-base-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hapi-mustache-base-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hapi-mustache-base-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hapi-mustache-base-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hapi-mustache-base-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="govuk_template_mustache" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,7 +318,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -372,7 +330,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3862069" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -478,26 +436,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/public.js">
+    <entry file="file://$PROJECT_DIR$/src/views/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        <state relative-caret-position="244">
+          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/form.html">
+    <entry file="file://$PROJECT_DIR$/src/routes/public.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/default.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+        <state relative-caret-position="585">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding />
         </state>
       </provider>

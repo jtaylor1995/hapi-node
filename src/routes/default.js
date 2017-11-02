@@ -15,24 +15,11 @@ module.exports = [{
   }
 },
 {
-  method: 'GET',
-  path: '/site',
-  handler: function (request, reply) {
-    console.log('Requested site page')
-    const viewContext = {}
-
-    viewContext.pageTitle = 'Example Site Page'
-
-    reply.view('site/site', viewContext)
-  }
-},
-{
   method: 'POST',
   path: '/form',
   handler: function (request, reply) {
     var errors = []
 
-    // MAKE THIS HAPI
        if(!request.payload.name)
             errors.push({description: 'Please provide your name', field: 'name'})
 
@@ -49,7 +36,8 @@ module.exports = [{
                     'companyDesc': get(errors, 'company'),
                     'errors': errors})
                 } else {
-                    res.redirect('/site')
+                // MAKE THIS GO TO /VIEW
+                    reply.redirect('/')
                 }
 
   }
