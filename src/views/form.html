@@ -7,7 +7,7 @@
 
       <h1 class="heading-xlarge">Submit Registration</h1>
 
-      {{#areErrors}}
+      {{#isErrors}}
       <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
 
           <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
@@ -21,16 +21,16 @@
           </ul>
 
       </div>
-      {{/areErrors}}
+      {{/isErrors}}
 
       <form action="/form" method="POST" enctype="multipart/form-data">
-          <div class="form-group {{#nameError}} form-group-error {{/nameError}}">
+          <div class="form-group {{#isError errors 'name'}} form-group-error {{/isError}}">
               <label class="form-label-bold" for="name">Name
-                  {{#nameError}}
+                  {{#isError errors 'name'}}
                   <span class="error-message">
-                      {{nameDesc}}
+                      {{#get errors 'name'}}{{/get}}
                   </span>
-                  {{/nameError}}
+                  {{/isError}}
               </label>
               <input class="form-control" type="text" id="name" name="name" value="{{ data.name }}">
 

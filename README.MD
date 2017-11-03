@@ -1,5 +1,5 @@
 
-# hapi-mustache-base-app
+# node-hapi-mustache-app
 
 Basic template project for a GOV.UK digital service using Hapi and Mustache
 
