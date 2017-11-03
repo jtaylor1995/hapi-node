@@ -6,7 +6,8 @@
   "scripts": {
     "test": "lab -t 90",
     "test-cov-html": "lab -r html -o coverage.html",
-    "sass": "./sass.sh"
+    "sass": "./sass.sh",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,13 +15,6 @@
     "browser-sync": "^2.18.13",
     "code": "^4.1.0",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-lab": "^1.0.7",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-standard": "^10.0.0",
-    "gulp-watch": "^4.3.11",
     "lab": "^14.1.1",
     "node-sass": "^4.5.3",
     "run-sequence": "^2.1.0",
@@ -34,6 +28,7 @@
     "handlebars": "^4.0.10",
     "hapi": "^16.5.0",
     "inert": "^4.2.1",
+    "nodemon": "^1.12.1",
     "path": "^0.12.7",
     "vision": "^4.1.1"
   },

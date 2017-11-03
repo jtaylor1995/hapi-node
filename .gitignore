@@ -2,3 +2,4 @@
 /govuk_modules/
 /public/
 coverage.html
+.idea/*
