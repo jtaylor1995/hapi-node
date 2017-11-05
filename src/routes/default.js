@@ -31,7 +31,7 @@ module.exports = [{
       errors.push({description: 'Please provide your company', field: 'company'})
 
 
-   const viewContext = {
+   const errorViewContext = {
      'pageTitle': 'Example Page',
      'data': request.payload,
      'errors': errors,
@@ -46,10 +46,10 @@ module.exports = [{
    }
 
     if(errors.length) {
-       reply.view('form', viewContext)
+       reply.view('form', errorViewContext)
     } else {
        // MAKE THIS GO TO /VIEW
-       reply.view('registered', viewContext)
+       reply.view('registered', successViewContext)
     }
 
   }
