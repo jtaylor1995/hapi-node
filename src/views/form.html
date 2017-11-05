@@ -7,23 +7,25 @@
 
       <h1 class="heading-xlarge">Submit Registration</h1>
 
-      {{#isErrors}}
-      <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+        {{#isErrors}}
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
 
-          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-              Please fix the following errors
-          </h2>
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+                Please fix the following errors
+            </h2>
 
-          <ul class="error-summary-list">
-              {{#errors}}
-              <li><a href="#{{field}}">{{description}}</a></li>
-              {{/errors}}
-          </ul>
+            <ul class="error-summary-list">
+                {{#each errors}}
+                <li><a href="#{{field}}">{{description}}</a></li>
+                {{/each}}
+            </ul>
 
-      </div>
-      {{/isErrors}}
+        </div>
+
+        {{/isErrors}}
 
       <form action="/form" method="POST" enctype="multipart/form-data">
+          <script id="name-error-template" type="text/x-handlebars-template"></script>
           <div class="form-group {{#isError errors 'name'}} form-group-error {{/isError}}">
               <label class="form-label-bold" for="name">Name
                   {{#isError errors 'name'}}
@@ -36,13 +38,13 @@
 
           </div>
 
-          <div class="form-group {{#companyError}} form-group-error {{/companyError}} ">
+          <div class="form-group {{#isError errors 'company'}} form-group-error {{/isError}} ">
               <label class="form-label-bold" for="company">Company
-                  {{#companyError}}
+                  {{#isError errors 'company'}}
                   <span class="error-message">
-                      {{companyDesc}}
+                      {{#get errors 'company'}}{{/get}}
                   </span>
-                  {{/companyError}}
+                  {{/isError}}
               </label>
               <input class="form-control" type="text" id="company" name="company" value="{{ data.company }}">
           </div>
