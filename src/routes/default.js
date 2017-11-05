@@ -1,29 +1,4 @@
-const handlebars = require('handlebars')
-// Are there any errors
-const isErrors = (errors) => {
-    return errors.length > 0
-};
-// Is there a specific error
-const isError = (errors, field) => {
-    return errors.filter(error => error.field == field).length == 1
-};
-// Get an error description
-const get = (errors, field) => {
-    return errors.filter(error => error.field == field)[0].description
-};
-
-handlebars.registerHelper( "isError", function(errors, field, options) {
-    if(isError(errors, field)) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this)
-    }
-});
-
-handlebars.registerHelper('get', function(errors, field) {
-  return get(errors, field)
-});
-
+const helpers = require('../helpers/error_helpers.js')
 module.exports = [{
   method: 'GET',
   path: '/',
@@ -36,7 +11,7 @@ module.exports = [{
         'pageTitle': 'Example Page',
         'errors': errors,
         'isErrors': function () {
-            return isErrors(errors)
+            return helpers.isErrors(errors)
           }
     }
     reply.view('form', viewContext)
@@ -61,7 +36,7 @@ module.exports = [{
      'data': request.payload,
      'errors': errors,
      'isErrors': function () {
-         return isErrors(errors)
+         return helpers.isErrors(errors)
        }
    }
 
