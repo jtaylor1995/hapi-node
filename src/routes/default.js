@@ -65,11 +65,16 @@ module.exports = [{
        }
    }
 
+   const successViewContext = {
+    'pageTitle': 'Success',
+    'data': request.payload
+   }
+
     if(errors.length) {
        reply.view('form', viewContext)
     } else {
        // MAKE THIS GO TO /VIEW
-       reply.redirect('/')
+       reply.view('registered', viewContext)
     }
 
   }
