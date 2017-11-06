@@ -1,8 +1,16 @@
 const Hapi = require('hapi')
+
 const server = new Hapi.Server()
 
 server.connection({
-  port: 8000
+  port: 8000,
+  routes: {
+        validate: {
+            options: {
+                abortEarly: false
+            }
+        }
+    }
 })
 
 server.register([require('inert'), require('vision')], (err) => {
