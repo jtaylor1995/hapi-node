@@ -27,10 +27,13 @@ module.exports = [{
 
       //Langauge string has !! in because it is an escape prefix
       const schema = {
-        name: Joi.string().required().options({
+        name: Joi.string().required().max(20).options({
           language: {
             any: {
-              empty: '!!Please enter a name',
+              empty: '!!Please enter a name'
+            },
+            string: {
+              max: '!!Name must be no longer than 20 characters'
             }
           }
         }),
