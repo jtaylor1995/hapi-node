@@ -25,7 +25,6 @@ module.exports = [{
   path: '/form',
   config: {
     handler: function (request, reply) {
-      console.log("HELLO");
       var errors = []
       Joi.validate({name: request.payload.name, company: request.payload.company}, validation.schema, {abortEarly: false}, function (err, value) {
         if (err) {
