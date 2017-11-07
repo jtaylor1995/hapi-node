@@ -1,4 +1,5 @@
 const helpers = require('../helpers/error_helpers.js')
+const validation = require('../helpers/form_validation.js')
 const Joi = require('joi')
 
 module.exports = [{
@@ -6,7 +7,6 @@ module.exports = [{
   path: '/',
   handler: function (request, reply) {
     var errors = []
-    console.log('Requested index page')
 
     const viewContext = {
       'pageTitle': 'Example Page',
@@ -23,34 +23,14 @@ module.exports = [{
   path: '/form',
   config: {
     handler: function (request, reply) {
-      // Langauge has !! in because it is an escape prefix
-      const schema = {
-        name: Joi.string().required().max(20).options({
-          language: {
-            any: {
-              empty: '!!Please enter a name'
-            },
-            string: {
-              max: '!!Name must be no longer than 20 characters'
-            }
-          }
-        }),
-        company: Joi.string().required().options({
-          language: {
-            any: {
-              empty: '!!Please enter a company'
-            }
-          }
-        })
-      }
 
       var errors = []
-      Joi.validate({name: request.payload.name, company: request.payload.company}, schema, {abortEarly: false}, function (err, value) {
+      Joi.validate({name: request.payload.name, company: request.payload.company}, validation.schema, {abortEarly: false}, function (err, value) {
         if (err) {
-          console.log(err)
           err.details.forEach(function (detail) {
             errors.push({description: detail.message, field: detail.path})
           })
+
           const errorViewContext = {
             'pageTitle': 'Example Page',
             'data': request.payload,
