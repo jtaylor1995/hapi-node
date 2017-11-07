@@ -1,6 +1,7 @@
 const helpers = require('../helpers/error_helpers.js')
 const validation = require('../helpers/form_validation.js')
 const Joi = require('joi')
+const server = require('../../index.js')
 
 module.exports = [{
   method: 'GET',
@@ -13,7 +14,8 @@ module.exports = [{
       'errors': errors,
       'isErrors': function () {
         return helpers.isErrors(errors)
-      }
+      },
+      'crumb': server.plugins.crumb.generate(request, reply)
     }
     reply.view('form', viewContext)
   }
@@ -23,7 +25,7 @@ module.exports = [{
   path: '/form',
   config: {
     handler: function (request, reply) {
-
+      console.log("HELLO");
       var errors = []
       Joi.validate({name: request.payload.name, company: request.payload.company}, validation.schema, {abortEarly: false}, function (err, value) {
         if (err) {
