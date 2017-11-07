@@ -1,13 +1,16 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
-const server = require('../index')
+const server = require('../index.js')
+
+var request = require('supertest');
+
 
 lab.experiment('Basic HTTP Tests', () => {
-  lab.test('GET /site (endpoint test)', (done) => {
+  lab.test('GET / (index endpoint test)', (done) => {
     var options = {
       method: 'GET',
-      url: '/site'
+      url: '/'
     }
 
     // Simulate an http request
@@ -16,9 +19,22 @@ lab.experiment('Basic HTTP Tests', () => {
       Code.expect(response.statusCode).to.equal(200)
 
       // Expect some content to be on the returned page
-      Code.expect(response.result).to.contain('What\'s the site name?')
+      Code.expect(response.result).to.contain('Submit Registration')
 
       server.stop(done)  // done() callback is required to end the test.
     })
+  })
+})
+
+
+lab.experiment('Basic HTTP Supertest', () => {
+  lab.test('GET / (index page test)', (done) => {
+    request(server.listener)
+      .get('/')
+      .expect(200)
+      .end(function(err, res) {
+        if (err) return done(err);
+        done();
+      });
   })
 })
