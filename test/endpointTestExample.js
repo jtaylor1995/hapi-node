@@ -31,10 +31,6 @@ lab.experiment('Basic HTTP Supertest', () => {
   lab.test('GET / (index page test)', (done) => {
     request(server.listener)
       .get('/')
-      .expect(200)
-      .end(function(err, res) {
-        if (err) return done(err);
-        done();
-      });
+      .expect(200, done);
   })
 })
