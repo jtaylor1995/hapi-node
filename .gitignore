@@ -4,3 +4,5 @@
 coverage.html
 .idea/*
 *.log
+*.iml
+.DS_Store
