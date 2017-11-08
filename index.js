@@ -1,5 +1,5 @@
 const Hapi = require('hapi')
-const winston = require('winston')
+const winston = require('winston');
 
 const server = new Hapi.Server()
 
@@ -7,15 +7,7 @@ server.connection({
   port: 8000
 })
 
-var crumbOptions = {
-  restful: false, // false enables payload level validation of crumb, true uses X-CSRF-Token header
-  addToViewContext: true, // automatically add to view contexts
-  cookieOptions: {
-    isSecure: false // Set to false when not using HTTPS
-  }
-}
-
-server.register({ register: require('crumb'), options: crumbOptions}, function (err) {
+server.register({ register: require('crumb'), options: {}}, function (err) {
   if (err) {
     throw err
   }
@@ -41,7 +33,7 @@ server.start((err) => {
   console.info('Server running at:', server.info)
 })
 
-// Create a basic logger
+//Create a basic logger
 winston.loggers.add('logger', {
   console: {
     level: 'debug',
@@ -52,6 +44,6 @@ winston.loggers.add('logger', {
     filename: 'test-log-file.log',
     level: 'warn'
   }
-})
+});
 
 module.exports = server
