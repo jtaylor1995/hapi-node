@@ -3,11 +3,16 @@ const validation = require('../helpers/form_validation.js')
 const Joi = require('joi')
 const server = require('../../index.js')
 const xss = require('xss')
+const winston = require('winston');
+const logger = winston.loggers.get('logger');
+
 
 module.exports = [{
   method: 'GET',
   path: '/',
   handler: function (request, reply) {
+    logger.debug('Requesting index')
+
     var errors = []
 
     const viewContext = {

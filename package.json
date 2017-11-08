@@ -35,7 +35,8 @@
     "nodemon": "^1.12.1",
     "path": "^0.12.7",
     "vision": "^4.1.1",
-    "xss": "^0.3.4"
+    "xss": "^0.3.4",
+    "winston": "^2.4.0"
   },
   "standard": {
     "ignore": [

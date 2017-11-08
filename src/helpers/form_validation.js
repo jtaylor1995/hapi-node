@@ -1,5 +1,6 @@
 const Joi = require('joi')
 
+// '!!' used as an escape prefix to allow fully custom error messages from JOI
 const schema = {
   name: Joi.string().trim().required().max(20).options({
     language: {
