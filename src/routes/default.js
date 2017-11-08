@@ -2,7 +2,7 @@ const helpers = require('../helpers/error_helpers.js')
 const validation = require('../helpers/form_validation.js')
 const Joi = require('joi')
 const server = require('../../index.js')
-const xss = require('xss');
+const xss = require('xss')
 
 module.exports = [{
   method: 'GET',
