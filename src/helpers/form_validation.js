@@ -1,7 +1,7 @@
 const Joi = require('joi')
 
 const schema = {
-  name: Joi.string().required().max(20).options({
+  name: Joi.string().trim().required().max(20).options({
     language: {
       any: {
         empty: '!!Please enter a name'
@@ -11,7 +11,7 @@ const schema = {
       }
     }
   }),
-  company: Joi.string().required().options({
+  company: Joi.string().trim().required().options({
     language: {
       any: {
         empty: '!!Please enter a company'

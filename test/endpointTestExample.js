@@ -1,23 +1,19 @@
 const server = require('../index.js')
-var request = require('supertest');
+var request = require('supertest')
 var Chai = require('Chai')
 
-
-describe('Endpoint', function() {
-
-  it('should return 200 status', function(done) {
+describe('Endpoint', function () {
+  it('should return 200 status', function (done) {
     request(server.listener)
       .get('/')
       .expect(200)
 
     server.stop(done)
-  });
-});
+  })
+})
 
-describe('Endpoint inject', function() {
-
-  it('should return 200 status without supertest', function(done) {
-
+describe('Endpoint inject', function () {
+  it('should return 200 status without supertest', function (done) {
     var options = {
       method: 'GET',
       url: '/'
@@ -31,5 +27,5 @@ describe('Endpoint inject', function() {
 
       server.stop(done)  // done() callback is required to end the test.
     })
-  });
-});
+  })
+})
