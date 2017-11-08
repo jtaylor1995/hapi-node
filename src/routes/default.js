@@ -11,8 +11,8 @@ module.exports = [{
   method: 'GET',
   path: '/',
   handler: function (request, reply) {
-    logger.debug('Requesting index')
 
+    logger.silly('Requesting index')
     var errors = []
 
     const viewContext = {
@@ -21,6 +21,7 @@ module.exports = [{
       'isErrors': function () {
         return helpers.isErrors(errors)
       },
+      //Adds a crumb token to prevent CSRF
       'crumb': server.plugins.crumb.generate(request, reply)
     }
     reply.view('form', viewContext)
@@ -37,6 +38,8 @@ module.exports = [{
           err.details.forEach(function (detail) {
             errors.push({description: detail.message, field: detail.path})
           })
+
+          //Protect against XSS
           request.payload.name = xss(request.payload.name)
           request.payload.company = xss(request.payload.company)
           const errorViewContext = {
