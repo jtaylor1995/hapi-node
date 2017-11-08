@@ -34,7 +34,8 @@
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
     "path": "^0.12.7",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+    "xss": "^0.3.4"
   },
   "standard": {
     "ignore": [

@@ -2,6 +2,7 @@ const helpers = require('../helpers/error_helpers.js')
 const validation = require('../helpers/form_validation.js')
 const Joi = require('joi')
 const server = require('../../index.js')
+const xss = require('xss');
 
 module.exports = [{
   method: 'GET',
@@ -31,7 +32,8 @@ module.exports = [{
           err.details.forEach(function (detail) {
             errors.push({description: detail.message, field: detail.path})
           })
-
+          request.payload.name = xss(request.payload.name)
+          request.payload.company = xss(request.payload.company)
           const errorViewContext = {
             'pageTitle': 'Example Page',
             'data': request.payload,
