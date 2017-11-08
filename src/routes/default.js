@@ -35,6 +35,7 @@ module.exports = [{
       var errors = []
       Joi.validate({name: request.payload.name, company: request.payload.company}, validation.schema, {abortEarly: false}, function (err, value) {
         if (err) {
+          logger.debug("Error in form")
           err.details.forEach(function (detail) {
             errors.push({description: detail.message, field: detail.path})
           })
@@ -56,7 +57,7 @@ module.exports = [{
             'pageTitle': 'Success',
             'data': request.payload
           }
-
+          logger.info('User registered')
           reply.view('registered', successViewContext)
         }
       })
