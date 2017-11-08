@@ -1,5 +1,5 @@
 const Hapi = require('hapi')
-const winston = require('winston');
+const winston = require('winston')
 
 const server = new Hapi.Server()
 
@@ -41,7 +41,7 @@ server.start((err) => {
   console.info('Server running at:', server.info)
 })
 
-//Create a basic logger
+// Create a basic logger
 winston.loggers.add('logger', {
   console: {
     level: 'debug',
@@ -52,6 +52,6 @@ winston.loggers.add('logger', {
     filename: 'test-log-file.log',
     level: 'warn'
   }
-});
+})
 
 module.exports = server

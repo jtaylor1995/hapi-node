@@ -3,7 +3,7 @@
 
 Basic template project for a GOV.UK digital service using Hapi and Mustache
 
-To run the project (weatches for JS/HTML changes):
+To run the project (watches for JS/HTML changes):
 ```sh
 $ npm install
 $ npm run sass

@@ -3,15 +3,13 @@ const validation = require('../helpers/form_validation.js')
 const Joi = require('joi')
 const server = require('../../index.js')
 const xss = require('xss')
-const winston = require('winston');
-const logger = winston.loggers.get('logger');
-
+const winston = require('winston')
+const logger = winston.loggers.get('logger')
 
 module.exports = [{
   method: 'GET',
   path: '/',
   handler: function (request, reply) {
-
     logger.silly('Requesting index')
     var errors = []
 
@@ -21,7 +19,7 @@ module.exports = [{
       'isErrors': function () {
         return helpers.isErrors(errors)
       },
-      //Adds a crumb token to prevent CSRF
+      // Adds a crumb token to prevent CSRF
       'crumb': server.plugins.crumb.generate(request, reply)
     }
     reply.view('form', viewContext)
@@ -35,12 +33,12 @@ module.exports = [{
       var errors = []
       Joi.validate({name: request.payload.name, company: request.payload.company}, validation.schema, {abortEarly: false}, function (err, value) {
         if (err) {
-          logger.debug("Error in form")
+          logger.debug('Error in form')
           err.details.forEach(function (detail) {
             errors.push({description: detail.message, field: detail.path})
           })
 
-          //Protect against XSS
+          // Protect against XSS
           request.payload.name = xss(request.payload.name)
           request.payload.company = xss(request.payload.company)
           const errorViewContext = {
